@@ -15,4 +15,5 @@ COPY --from=builder /app/node_modules node_modules/
 COPY package.json .
 EXPOSE 3000
 ENV NODE_ENV=production
+ENV PUBLIC_API_BASE_URL=http://localhost:8081
 CMD [ "node", "build" ]
